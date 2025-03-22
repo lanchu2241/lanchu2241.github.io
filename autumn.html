@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>秋之诗</title>
+    <style>
+        h1 {
+            color: white;
+            font-size: 50px;
+            font-style: oblique;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .word {
+            margin: 5px;
+            padding: 10px;
+            font-size: 18px;
+            color: black;
+            font-style: oblique;
+            font-weight: normal;
+        }
+
+        body {
+            text-align: center;
+            margin-top: 20px;
+            background-image: url('photos/qiu.PNG');
+            background-size: cover;
+        }
+        .blank-line {
+            margin: 30px ;
+        }
+        .blank {
+            display: inline-block;
+            width: 80px;
+            border-bottom: 2px solid white;
+            margin:10px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>秋之诗</h1>
+
+    <div class="blank-line">
+        <span class="blank"></span>
+        <span class="blank"></span>
+    </div>
+    <div class="blank-line">
+        <span class="blank"></span>
+        <span class="blank"></span>
+        <span class="blank"></span>
+    </div>
+    <div class="blank-line">
+        <span class="blank"></span>
+        <span class="blank"></span>
+        <span class="blank"></span>
+        <span class="blank"></span>
+    </div>
+
+    <div id="words">
+        <button class="word" data-word="秋天" onclick="fillBlank('秋天')">秋天</button>
+        <button class="word" data-word="落叶" onclick="fillBlank('落叶')">落叶</button>
+        <button class="word" data-word="旋转" onclick="fillBlank('旋转')">旋转</button>
+        <button class="word" data-word="跳跃" onclick="fillBlank('跳跃')">跳跃</button>
+        <button class="word" data-word="诗歌" onclick="fillBlank('诗歌')">诗歌</button><br>
+        <button class="word" data-word="心脏" onclick="fillBlank('心脏')">心脏</button>
+        <button class="word" data-word="拥抱" onclick="fillBlank('拥抱')">拥抱</button>
+        <button class="word" data-word="永恒" onclick="fillBlank('永恒')">永恒</button>
+        <button class="word" data-word="模糊" onclick="fillBlank('模糊')">模糊</button>
+        <button class="word" data-word="我们" onclick="fillBlank('我们')">我们</button>
+    </div>
+
+    <script>
+    function fillBlank(word) {
+      const blanks = document.querySelectorAll('.blank');
+      for (let a = 0; a < blanks.length; a++) {
+          if (blanks[a].textContent == '') {
+              blanks[a].textContent = word;
+              break;}
+            }
+  }
+    </script>
+</body>
+</html>
